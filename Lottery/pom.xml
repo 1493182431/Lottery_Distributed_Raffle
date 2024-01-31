@@ -9,9 +9,6 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <!--相对于工程下其他的模块来说，总POM就是这些模块的父类模块，在父类模块中一般只提供基础的定义，不提供各个Jar包的引入配置。
-    如果在父类 POM 中引入了所有的 Jar，那么各个模块无论是否需要这个 Jar 都会被自动引入进去，造成没必要的配置。
-    同时也会影响对核心Jar的扰乱，让你分不清自己需要的是否就在眼前。-->
     <modules>
         <module>lottery-application</module>
         <module>lottery-domain</module>
@@ -33,6 +30,16 @@
         <version>2.3.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.5.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
