@@ -4,16 +4,9 @@
 
 
     <select id="queryAwardInfo" resultType="cn.itedus.lottery.infrastructure.po.Award">
-        SELECT id,
-               awardId,
-               awardType,
-               awardCount,
-               awardName,
-               awardContent,
-               createTime,
-               updateTime
-        FROM lottery.award
-        WHERE awardId = #{awardId}
+        SELECT id, award_id, award_type, award_name, award_content, create_time, update_time
+        FROM award
+        WHERE award_id = #{awardId}
     </select>
 
 </mapper>

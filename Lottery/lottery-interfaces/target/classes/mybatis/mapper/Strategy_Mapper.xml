@@ -5,15 +5,15 @@
 
     <select id="queryStrategy" resultType="cn.itedus.lottery.infrastructure.po.Strategy">
         SELECT id,
-               strategyId,
-               strategyDesc,
-               strategyMode,
-               grantType,
-               grantDate,
-               extInfo,
-               createTime,
-               updateTime
+               strategy_id,
+               strategy_desc,
+               strategy_mode,
+               grant_type,
+               grant_date,
+               ext_info,
+               create_time,
+               update_time
         FROM strategy
-        WHERE strategyId = #{strategyId}
+        WHERE strategy_id = #{strategyId}
     </select>
 </mapper>

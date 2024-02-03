@@ -18,8 +18,8 @@ import java.util.List;
 @SpringBootTest
 public class DrawAlgorithmTest {
 
-//    @Resource(name = "defaultRateRandomDrawAlgorithm")
-    @Resource(name = "singleRateRandomDrawAlgorithm")
+    @Resource(name = "entiretyRateRandomDrawAlgorithm")
+//    @Resource(name = "singleRateRandomDrawAlgorithm")
     private IDrawAlgorithm randomDrawAlgorithm;
 
     @Before
