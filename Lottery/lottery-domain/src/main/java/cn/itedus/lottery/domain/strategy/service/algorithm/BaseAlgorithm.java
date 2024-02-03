@@ -7,7 +7,7 @@ import java.security.SecureRandom;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Function;
+
 
 /**
  * @description: 共用的算法逻辑抽象类

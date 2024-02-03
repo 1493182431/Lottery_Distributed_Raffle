@@ -24,6 +24,8 @@ public class DrawConfig {
     /** 抽奖策略组 */
     protected static Map<Integer, IDrawAlgorithm> drawAlgorithmGroup = new ConcurrentHashMap<>();
 
+    // 当一个类使用 @PostConstruct 注解标记一个方法时，这个方法将会在该类的实例被创建后，且所有的依赖注入（DI）完成之后调用。
+    // 这通常用于在对象初始化完成后进行一些额外的操作，例如初始化资源、建立连接等。
     @PostConstruct
     public void init() {
         drawAlgorithmGroup.put(Constants.StrategyMode.ENTIRETY.getCode(), entiretyRateRandomDrawAlgorithm);
