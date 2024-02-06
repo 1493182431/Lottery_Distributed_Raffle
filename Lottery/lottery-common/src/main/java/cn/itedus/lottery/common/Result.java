@@ -6,13 +6,17 @@ import java.io.Serializable;
  * 统一返回对象中，Code码、Info描述
  */
 public class Result implements Serializable {
-    //Dubbo 接口无论是入参、出参，以及参数中的包括的对象，都必须 implements Serializable
+
     private static final long serialVersionUID = -3826891916021780628L;
     private String code;
     private String info;
 
-    public static Result buildResult(String code, String info) {
-        return new Result(code, info);
+    public static Result buildResult(Constants.ResponseCode code, String info) {
+        return new Result(code.getCode(), info);
+    }
+
+    public static Result buildResult(Constants.ResponseCode code, Constants.ResponseCode info) {
+        return new Result(code.getCode(), info.getInfo());
     }
 
     public static Result buildSuccessResult() {
@@ -21,6 +25,10 @@ public class Result implements Serializable {
 
     public static Result buildErrorResult() {
         return new Result(Constants.ResponseCode.UN_ERROR.getCode(), Constants.ResponseCode.UN_ERROR.getInfo());
+    }
+
+    public static Result buildErrorResult(String info) {
+        return new Result(Constants.ResponseCode.UN_ERROR.getCode(), info);
     }
 
     public Result(String code, String info) {

@@ -7,14 +7,11 @@ import cn.itedus.lottery.domain.award.service.factory.DistributionGoodsFactory;
 import cn.itedus.lottery.domain.award.service.goods.IDistributionGoods;
 import cn.itedus.lottery.domain.strategy.model.req.DrawReq;
 import cn.itedus.lottery.domain.strategy.model.res.DrawResult;
-import cn.itedus.lottery.domain.strategy.model.vo.AwardRateInfo;
 import cn.itedus.lottery.domain.strategy.model.vo.DrawAwardInfo;
-import cn.itedus.lottery.domain.strategy.service.algorithm.IDrawAlgorithm;
 import cn.itedus.lottery.domain.strategy.service.draw.IDrawExec;
 import cn.itedus.lottery.infrastructure.dao.IActivityDao;
 import cn.itedus.lottery.infrastructure.po.Activity;
 import com.alibaba.fastjson.JSON;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -23,11 +20,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
-import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
+/**
+ * @description: SpringBoot 单元测试
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SpringRunnerTest {

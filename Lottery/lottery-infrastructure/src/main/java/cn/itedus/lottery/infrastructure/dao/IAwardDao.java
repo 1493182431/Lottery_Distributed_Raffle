@@ -4,14 +4,14 @@ import cn.itedus.lottery.infrastructure.po.Award;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
-/**
- * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
- * 公众号：bugstack虫洞栈
- * Create by 小傅哥(fustack)
- */
+import java.util.List;
+
+
 @Mapper
 public interface IAwardDao {
 
 
     Award queryAwardInfo(String awardId);
+
+    void insertList(List<Award> req);
 }
